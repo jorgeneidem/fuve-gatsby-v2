@@ -1,0 +1,42 @@
+.vehicles__section {
+  padding-top: 0;
+}
+
+.vehicle {
+  background: white;
+  display: grid;
+  grid-template-rows: 24fr 10fr;
+  color: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  text-align: center;
+  /* align-items: center; */
+}
+
+a.vehicle {
+  box-shadow: 0 0.125rem 2rem -0.25rem rgba(10,10,10,.175);
+  transition: box-shadow .2s;
+}
+
+a.vehicle:hover {
+  box-shadow: 0 0.125rem 2rem -0.25rem rgba(10,10,10,.475);
+}
+
+.vehicle__artwork {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
+.vehicle__details {
+    padding: 0.7rem 2rem 1rem 1rem;
+}
+
+.vehicle__title {
+  font-size: calc(1.0rem + 0.1vw);
+}
+
+.vehicle__desc {
+    font-size: 0.9rem;
+}
