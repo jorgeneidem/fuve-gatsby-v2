@@ -7,4 +7,4 @@ The MINI Electric is scheduled for release in 2019. They will basically add elec
 
 <!-- end -->
 
-![MINI Electric concept](/static/assets/mini-electric.jpg)
+![MINI Electric concept](/assets/mini-electric.jpg)
