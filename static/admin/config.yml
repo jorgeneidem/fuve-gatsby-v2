@@ -13,6 +13,8 @@ collections:
     fields: 
       - { name: title, label: Title }
       - { name: date, label: Create At, widget: date }
+      - { name: image, label: PostImage, widget: image } 
       - { name: body, label: Post, widget: markdown } 
+    
 
 
