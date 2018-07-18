@@ -2,8 +2,8 @@ backend:
   name: github
   repo: jorgeneidem/fuve-levelup-gatsby
 
-media_folder: src/posts
-public_folder: ../
+media_folder: static/assets
+public_folder: /assets
 
 collections:
   - name: post
@@ -13,7 +13,7 @@ collections:
     fields: 
       - { name: title, label: Title }
       - { name: date, label: Create At, widget: date }
-      - { name: hero_image, label: Hero Image, widget: image } 
+      - { name: hero_image, label: Hero Image, widget: custompathimage, customMediaPath: ../assets/, rawMediaPath: https://raw.githubusercontent.com/jorgeneidem/fuve-levelup-gatsby/static/assets/ }
       - { name: body, label: Post, widget: markdown } 
     
 
