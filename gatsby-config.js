@@ -10,21 +10,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'img',
-        path: `${__dirname}/static/assets/`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'img',
         path: `${__dirname}/src/images`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'img',
-        path: `${__dirname}/src/posts/`
       }
     },
     {
@@ -37,11 +23,19 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        excerpt_separator: `<!-- end -->`
+        excerpt_separator: `<!-- end -->`,
+        plugins: [
+          `gatsby-remark-copy-images`,
+        ]
       }
     },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 590,
+      },
+    },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-netlify-cms'
+    'gatsby-plugin-sharp'
   ],
-};
+}

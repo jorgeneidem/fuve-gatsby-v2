@@ -1,13 +1,11 @@
 ---
-title: "Jaguar i-Pace"
+title: "Audi e-tron GT"
 date: "2018-05-30"
-cover_image: "./jaguar-ipace.jpg"
+cover_image: "./audi-e-tron.jpg"
 ---
 
 The sporty four-seater will be manufactured as of 2020. 
 <!-- end -->
-
-![](jaguar-ipace.jpg)
 
 * This 
 * Is 
