@@ -2,8 +2,8 @@ backend:
   name: github
   repo: jorgeneidem/fuve-levelup-gatsby
 
-media_folder: src/posts
-public_folder: ../
+media_folder: static/assets
+public_folder: /assets
 
 collections:
   - name: post
