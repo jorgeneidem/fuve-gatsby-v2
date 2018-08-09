@@ -1,15 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import HeaderBg from 'gatsby-image'
 import logo from '../images/fuve-logo-white.png'
 
 const HeaderWrapper = styled.div`
-  background: #000000;
+background: none;
   margin-bottom: 1.45rem;
   overflow: hidden;
   position: relative;
-  height: 80px;
+  text-align: center;
   h1 img {
     width: 102px;
   }
@@ -20,23 +19,37 @@ const HeaderWrapper = styled.div`
   }
 `
 
-const HeaderContainer = styled.div`
-  display: grid;
-  grid-template-columns: auto 1fr auto;  
-  margin: 0 auto;
+const HeaderContainer = styled.div` 
   padding: 1.45rem 1.0875rem;
-  z-index: 2;
-  position: relative;
+  z-index: -1000;
+  &:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  background: linear-gradient(110deg, #38A688, #2BB993, #26C299, #3CC39F);
+  transform-origin: 0 100%;
+  transform: rotate(-12deg) scale(1.2,1.2);
+  bottom: 0;
+  left: 0;
+  z-index: -1000;
+  @media (min-width: 660px) {
+    transform: rotate(-8deg) scale(1.2,1.2);
+  }
+  @media (min-width: 960px) {
+    transform: rotate(-4deg) scale(1.2,1.2);
+  }
 `
 
 const PayOff = styled.div`
-  color: #888888;
-  font-weight: 100;
-  font-size: 12px;
-  padding-left: 10px;
-  padding-top: 6px;
+  color: #f8f8f8;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 10px auto 60px auto;
+  font-size: 32px;
   @media (max-width: 600px) {
-    font-size: 10px;
+    font-size: 24px;
   }
 `
 
@@ -45,15 +58,19 @@ padding-top: 3px;
   button {
     border: none;
     color: #ffffff;
-    border-radius: 4px;
-    padding: 11px 16px 12px 16px;
+    border-radius: 12px;
+    padding: 17px 24px 18px 24px;
     margin-top: -6px;
-    background-color: #21725C;
+    background-color: #3ED4AC;
+    font-weight: 500;
+    transition: .25s;
+
       a {
         color: #ffffff;
       }
       :hover {
-        background-color: #21725C
+        background-color: #42DCB3;
+        cursor: pointer;
       }
   }
 `
@@ -72,19 +89,9 @@ const Header = ({ siteTitle, backgroundImage }) => (
           <img src={logo} alt="Fuve logo" />
         </Link>
       </h1>
-      <PayOff>Future Vehicles Overview</PayOff>
-      <NavBar>
-            <button><Link to="/about">Filter</Link></button>
-      </NavBar>
+      <PayOff>Get the overview of <br/>new and future vehicles</PayOff>
+      <NavBar><button>Receive updates</button></NavBar>
     </HeaderContainer>
-    <HeaderBg style={{
-      position: 'absolute',
-      left: '0',
-      top: '0',
-      width: '100%',
-      height: '100%'
-    }}
-    sizes={backgroundImage} />
   </HeaderWrapper>
 )
 

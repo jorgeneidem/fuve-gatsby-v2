@@ -15,7 +15,6 @@ const Layout = ({ children, data }) => (
     />
     <Header 
       siteTitle={data.site.siteMetadata.title}
-      backgroundImage={data.background.sizes}
     />
     
       {children()}

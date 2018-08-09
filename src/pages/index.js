@@ -11,7 +11,8 @@ const IndexPage = ({data}) => (
     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
     gridGap: 20,
     gridRowGap: 20,
-    justifyContent: 'start'
+    justifyContent: 'start',
+    maxWidth: 1280
   }}>
     {data.allMarkdownRemark.edges.map(({node}) => {
       return <PostListing key={node.id} post={node} />
