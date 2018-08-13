@@ -1,5 +1,41 @@
 import React, { Component } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
+import Img from "gatsby-image";
+
+const ImageGridWrapper = styled.div`
+  margin: 0 0 20px 0;
+  width: 100%;
+  display: grid;
+  grid-gap: 8px;  
+  align-items: start;
+  grid-template-areas: 
+    "a a a a a a a a a"
+    "b b b c c c c c c"
+    "b b b e e e d d d";
+  img {
+    border-radius: 4px;
+  }
+`
+
+const Image1 = styled.div`
+ grid-area: a;
+`
+
+const Image2 = styled.div`
+grid-area: b;
+`
+
+const Image3 = styled.div`
+grid-area: c;
+`
+
+const Image4 = styled.div`
+grid-area: d;
+`
+
+const Image5 = styled.div`
+grid-area: e;
+`
 
 const PostPageBody = styled.div`  
   max-width: 64vw;
@@ -7,11 +43,11 @@ const PostPageBody = styled.div`
   background-color: white;
   min-height: 800px;
   border-radius: 3px;
-  padding: 50px;
+  padding: 30px 50px 70px 50px;
   h1 {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   @media (max-width: 480px) {
     max-width: 94vw;
@@ -21,6 +57,22 @@ const PostPageBody = styled.div`
     }
   }
 `
+const PostPageBodyContentWrapper = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+`
+
+const PostPageBodyContent = styled.div`
+font-size: 1.5rem;
+line-height: 1.3;
+grid-column-start: 2; 
+grid-column-end: 4; 
+padding-right: .5rem;
+@media (max-width: 480px) {
+  grid-column-start: 1; 
+  grid-column-end: 4; 
+}
+`
 
 export default class PostPage extends Component {
   render() {
@@ -28,11 +80,20 @@ export default class PostPage extends Component {
     return (
       <PostPageBody>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data.markdownRemark.html
-          }}
-        />
+        <ImageGridWrapper>
+          <Image1><Img sizes={data.markdownRemark.frontmatter.gallery_image_1.childImageSharp.sizes} /></Image1>
+          <Image2><Img sizes={data.markdownRemark.frontmatter.gallery_image_2.childImageSharp.sizes} /></Image2>
+          <Image3><Img sizes={data.markdownRemark.frontmatter.gallery_image_3.childImageSharp.sizes} /></Image3>
+          <Image4><Img sizes={data.markdownRemark.frontmatter.gallery_image_4.childImageSharp.sizes} /></Image4>
+          <Image5><Img sizes={data.markdownRemark.frontmatter.gallery_image_5.childImageSharp.sizes} /></Image5>
+        </ImageGridWrapper>
+        <PostPageBodyContentWrapper>
+          <PostPageBodyContent
+            dangerouslySetInnerHTML={{
+              __html: data.markdownRemark.html
+            }}
+          />
+        </PostPageBodyContentWrapper>
       </PostPageBody>
     );
   }
@@ -45,6 +106,53 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD YYYY")
+        gallery_image_1
+         {
+          childImageSharp{
+            sizes(maxWidth: 930) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        gallery_image_2
+          {
+           childImageSharp{
+             sizes(maxWidth: 930) {
+                 ...GatsbyImageSharpSizes
+               }
+             }
+           }
+        gallery_image_3
+           {
+            childImageSharp{
+              sizes(maxWidth: 930) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+            gallery_image_4
+            {
+             childImageSharp{
+               sizes(maxWidth: 930) {
+                   ...GatsbyImageSharpSizes
+                 }
+               }
+             }
+             gallery_image_5
+           {
+            childImageSharp{
+              sizes(maxWidth: 930) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+        cover_image {
+          childImageSharp{
+              sizes(maxWidth: 930) {
+                  ...GatsbyImageSharpSizes
+                }
+            }
+        }
       }
     }
   }

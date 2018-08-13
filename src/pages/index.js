@@ -44,6 +44,53 @@ export const query = graphql`
                   }
                 }
               }
+              gallery_image_1
+         {
+          childImageSharp{
+            sizes(maxWidth: 930) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        gallery_image_2
+          {
+           childImageSharp{
+             sizes(maxWidth: 930) {
+                 ...GatsbyImageSharpSizes
+               }
+             }
+           }
+        gallery_image_3
+           {
+            childImageSharp{
+              sizes(maxWidth: 930) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+            gallery_image_4
+            {
+             childImageSharp{
+               sizes(maxWidth: 930) {
+                   ...GatsbyImageSharpSizes
+                 }
+               }
+             }
+             gallery_image_5
+           {
+            childImageSharp{
+              sizes(maxWidth: 930) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+              cover_image {
+                childImageSharp {
+                  sizes(maxWidth: 940) {
+                    srcSet
+                  }
+                }
+              }
             }
             fields {
               slug

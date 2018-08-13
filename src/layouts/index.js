@@ -36,17 +36,5 @@ export const query = graphql`
         desc
       }
     }
-    background: imageSharp(id: { regex: "/bg.jpeg/" }) {
-      sizes(
-        maxWidth: 2000, 
-        duotone: {
-          highlight: "#0C3028",
-          shadow: "#000000"
-        },
-        quality: 80
-      ) {
-        ...GatsbyImageSharpSizes
-      }
-    }
   }
 `
