@@ -12,6 +12,14 @@ body {
   margin: 0 auto;
 }
 
+article a:link {
+  color: #37A789;
+}
+
+article a:visited {
+  color: #26735E;
+}
+
 a:link,
 a:active,
 a:visited {

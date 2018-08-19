@@ -46,7 +46,7 @@ const PayOff = styled.div`
   color: #f8f8f8;
   font-weight: 300;
   max-width: 600px;
-  margin: 10px auto 60px auto;
+  margin: 10px auto 50px auto;
   font-size: 32px;
   @media (max-width: 600px) {
     font-size: 24px;
