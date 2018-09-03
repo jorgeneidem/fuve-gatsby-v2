@@ -2,89 +2,100 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
 
-const ImageGridWrapper = styled.div`
-  margin: 0 0 20px 0;
-  width: 100%;
-  display: grid;
-  grid-gap: 8px;  
-  align-items: start;
-  grid-template-areas: 
-    "a a a a a a a a a"
-    "b b b c c c c c c"
-    "b b b e e e d d d";
+const HeroImageWrapper = styled.div`
+  margin: 0 auto 40px auto;
+  width: 90%;
   img {
     border-radius: 4px;
+  }
+  @media (max-width: 480px) {
+    width: 96%;
+    margin: 0 auto 12px auto;
   }
 `
 
 const Image1 = styled.div`
- grid-area: a;
-`
-
-const Image2 = styled.div`
-grid-area: b;
-`
-
-const Image3 = styled.div`
-grid-area: c;
-`
-
-const Image4 = styled.div`
-grid-area: d;
-`
-
-const Image5 = styled.div`
-grid-area: e;
 `
 
 const PostPageBody = styled.div`  
-  max-width: 64vw;
-  margin: 0 auto;
+  margin: 0 auto;  
+  width: 80%;
+  max-width: 980px;
   background-color: white;
   min-height: 800px;
-  border-radius: 3px;
-  padding: 30px 50px 70px 50px;
+  border-radius: 4px;
+  padding-bottom: 30px;
   h1 {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 30px;
+    padding: 22px 0;
   }
-  @media (max-width: 980px) {
-    max-width: 98vw;
-    padding: 30px 25px 35px 25px;
+  @media (max-width: 480px) {
+    width: 96%;
+    h1 {
+      font-size: 2rem;
+    }
   }
-`
-const PostPageBodyContentWrapper = styled.div`
-display: grid;
-grid-template-columns: repeat(3, 1fr);
+  
 `
 
 const PostPageBodyContent = styled.div`
-grid-column-start: 2; 
-grid-column-end: 4; 
-line-height: 1.369;
-padding-right: .5rem;
+font-size: calc(1rem + 0.125vw);
+margin: 0 auto;
+width: 80%;
+max-width: 700px;
+line-height: 1.45;
 h3 {
-  font-size: 1.4rem;
-  line-height: 1.248;
-  margin-bottom: .369rem;
+  font-size: 1.227rem;
+  font-weight: 600;
+  line-height: 1.373;
+  margin-bottom: 1.45rem;
 }
 h4 {
+  font-size: calc(1rem + 0.125vw);
   margin-bottom: .428rem;
 }
-@media (max-width: 480px) {
-  max-width: 94vw;
-  padding: 0;
-  h1 {
-    font-size: 2rem;
-  }
-}
 p {
-  margin-bottom: .456rem;
+  margin-bottom: 1.75rem;
 }
-@media (max-width: 980px) {
-  grid-column-start: 1; 
-  grid-column-end: 4; 
+table {
+  font-size: .9rem;
+  border: 1px solid #dfe2e5;
+}
+
+table th,td {
+  border: 1px solid #dfe2e5;
+}
+
+table th:first-child,
+table td:first-child {
+  padding-left: .85rem;
+}
+
+table thead {
+  background-color: rgb(238,238,238);
+}
+
+@media (max-width: 480px) {
+  width: 94%; 
+  padding: 0;
+  table {
+    font-size: .8rem;
+  } 
+  h3, h4 {
+    font-size: 1rem;
+    margin-bottom: 0.45rem;
+  }
+  p {
+    margin-bottom: 1.125rem;
+  }
+  td,
+  th {
+    padding-left:   0.3rem;
+    padding-right:  0.3rem;
+    padding-top:    0.3rem;
+    padding-bottom: 0.3rem
+  }
 }
 `
 
@@ -95,20 +106,14 @@ export default class PostPage extends Component {
       <PostPageBody>
         <article>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
-          <ImageGridWrapper>
+          <HeroImageWrapper>
             <Image1><Img sizes={data.markdownRemark.frontmatter.gallery_image_1.childImageSharp.sizes} /></Image1>
-            <Image2><Img sizes={data.markdownRemark.frontmatter.gallery_image_2.childImageSharp.sizes} /></Image2>
-            <Image3><Img sizes={data.markdownRemark.frontmatter.gallery_image_3.childImageSharp.sizes} /></Image3>
-            <Image4><Img sizes={data.markdownRemark.frontmatter.gallery_image_4.childImageSharp.sizes} /></Image4>
-            <Image5><Img sizes={data.markdownRemark.frontmatter.gallery_image_5.childImageSharp.sizes} /></Image5>
-          </ImageGridWrapper>
-          <PostPageBodyContentWrapper>
+          </HeroImageWrapper>
             <PostPageBodyContent
               dangerouslySetInnerHTML={{
                 __html: data.markdownRemark.html
               }}
             />
-          </PostPageBodyContentWrapper>
         </article>
       </PostPageBody>
     );
@@ -125,43 +130,11 @@ export const query = graphql`
         gallery_image_1
          {
           childImageSharp{
-            sizes(maxWidth: 930) {
+            sizes(maxWidth: 830) {
                 ...GatsbyImageSharpSizes
               }
             }
           }
-        gallery_image_2
-          {
-           childImageSharp{
-             sizes(maxWidth: 930) {
-                 ...GatsbyImageSharpSizes
-               }
-             }
-           }
-        gallery_image_3
-           {
-            childImageSharp{
-              sizes(maxWidth: 930) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
-            gallery_image_4
-            {
-             childImageSharp{
-               sizes(maxWidth: 930) {
-                   ...GatsbyImageSharpSizes
-                 }
-               }
-             }
-             gallery_image_5
-           {
-            childImageSharp{
-              sizes(maxWidth: 930) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
         cover_image {
           childImageSharp{
               sizes(maxWidth: 930) {

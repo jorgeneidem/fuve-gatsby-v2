@@ -20,22 +20,21 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        excerpt_separator: `<!-- end -->`,
         plugins: [
           `gatsby-remark-copy-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          }
         ]
       }
     },
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        maxWidth: 590,
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
+    'gatsby-transformer-sharp'
   ],
 }

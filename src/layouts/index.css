@@ -272,7 +272,7 @@ ul {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.5rem;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -358,7 +358,8 @@ table {
   line-height: 1.45rem;
   border-collapse: collapse;
   width: 100%;
-}
+  }
+
 fieldset {
   margin-left: 0;
   margin-right: 0;
@@ -445,7 +446,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1rem / 2);
 }
 ol li {
   padding-left: 0;
@@ -515,6 +516,8 @@ th {
   padding-right: 0.96667rem;
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
+  
+  
 }
 th:first-child,
 td:first-child {
@@ -554,8 +557,5 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
-  }
-  .postpage-body {
-    max-width: 94vw;
   }
 }

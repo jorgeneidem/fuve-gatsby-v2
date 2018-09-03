@@ -13,6 +13,7 @@ The sporty four-seater will be manufactured as of 2020.
 <!-- end -->
 
 ![](jaguar-ipace.jpg)
+![](../images/eqa-promo.jpg)
 
 * This 
 * Is 
