@@ -1,40 +1,42 @@
 module.exports = {
   siteMetadata: {
-    title: 'Fuve Gatsby Levelup',
+    title: 'Fuve',
     desc: 'Find your future vehicle'
   },
   plugins: [
-    'gatsby-plugin-react-helmet', 
-    'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: 'img',
         path: `${__dirname}/src/images`
       }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: 'src',
         path: `${__dirname}/src/`
       }
     },
-    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-copy-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 700,
+              linkImagesToOriginal: true,
+              wrapperStyle: 'margin-bottom:0.65rem;'
             },
-          }
+          },
+          `gatsby-remark-copy-images`
         ]
       }
     },
-    'gatsby-transformer-sharp'
+    `gatsby-plugin-react-helmet`, 
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`
   ],
 }

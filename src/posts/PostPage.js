@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
+import Link from 'gatsby-link'
 
 const HeroImageWrapper = styled.div`
   margin: 0 auto 40px auto;
@@ -37,6 +38,15 @@ const PostPageBody = styled.div`
     }
   }
   
+`
+
+const HomeLinkWrapper = styled.div`
+margin: 0 auto;
+width: 80%;
+max-width: 700px;
+@media (max-width: 480px) {
+  width: 96%;
+}
 `
 
 const PostPageBodyContent = styled.div`
@@ -107,13 +117,14 @@ export default class PostPage extends Component {
         <article>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
           <HeroImageWrapper>
-            <Image1><Img sizes={data.markdownRemark.frontmatter.gallery_image_1.childImageSharp.sizes} /></Image1>
+            <Image1><Img sizes={data.markdownRemark.frontmatter.cover_image.childImageSharp.sizes} /></Image1>
           </HeroImageWrapper>
-            <PostPageBodyContent
-              dangerouslySetInnerHTML={{
-                __html: data.markdownRemark.html
-              }}
-            />
+            <PostPageBodyContent dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}/>
+            <HomeLinkWrapper>
+              <Link to={`/`}>
+                Go to front page
+              </Link>
+            </HomeLinkWrapper>
         </article>
       </PostPageBody>
     );
