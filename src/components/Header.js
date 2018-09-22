@@ -102,7 +102,7 @@ const Header = ({ siteTitle, backgroundImage }) => (
       </h1>
       <PayOff>Future versions of <br/>electric vehicles</PayOff>
       <NavBar>
-        <form method="post" action="#" style={{display: 'inline-block' }} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form method="post" style={{display: 'inline-block' }} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="bot-field" />
           <input type="text" name="email" id="email" placeholder="Enter your email address" style={{minWidth: 214 }} />
           <button type="submit" value="Send Message" className="special">Get updates</button>
