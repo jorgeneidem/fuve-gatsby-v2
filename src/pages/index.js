@@ -7,9 +7,9 @@ const IndexPage = ({data}) => (
     padding: '0px 1rem 1.45rem',
     paddingTop: 0,
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gridGap: 20,
-    gridRowGap: 20,
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gridGap: 30,
+    gridRowGap: 33,
     justifyContent: 'start',
     maxWidth: 1280
   }}>

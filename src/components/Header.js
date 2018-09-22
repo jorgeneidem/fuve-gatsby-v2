@@ -47,7 +47,7 @@ const PayOff = styled.div`
   font-weight: 300;
   max-width: 600px;
   margin: 10px auto 50px auto;
-  font-size: 32px;
+  font-size: 34px;
   @media (max-width: 600px) {
     font-size: 24px;
   }
@@ -89,7 +89,7 @@ const Header = ({ siteTitle, backgroundImage }) => (
           <img src={logo} alt="Fuve logo" />
         </Link>
       </h1>
-      <PayOff>Get the overview of <br/>new and future vehicles</PayOff>
+      <PayOff>Future versions of <br/>electric vehicles ⌄</PayOff>
       <NavBar><button>Receive updates</button></NavBar>
     </HeaderContainer>
   </HeaderWrapper>

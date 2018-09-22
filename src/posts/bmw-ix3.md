@@ -23,7 +23,6 @@ The car will have fifth generation BMW eDrive technology and a battery with 70+ 
 - [25.04.2018 Press Release, The BMW Concept iX3](https://www.press.bmwgroup.com/global/article/detail/T0280363EN/the-bmw-concept-ix3?language=en)
 - [BMW Concept iX3 overview (in Norwegian) ](https://www.bmw.no/no/all-models/bmw-i/iX3/2018/oversikt.html)
 
-####Images
 ![BMW iX3 front view](../images/bmw-ix3-image1.jpg)
 ![BMW iX3 front view](../images/bmw-ix3-image2.jpg)
 ![BMW iX3 side view](../images/bmw-ix3-image3.jpg)
