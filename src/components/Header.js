@@ -27,8 +27,9 @@ const HeaderContainer = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: red;
-  background: linear-gradient(110deg, #38A688, #2BB993, #26C299, #3CC39F);
+  /*background: linear-gradient(110deg, #38A688, #2BB993, #26C299, #3CC39F);*/
+  background: #BAB7B6;
+  background: linear-gradient(110deg, #B7B4B4, #BAB7B6, #BFBCBB, #C2BFBE);
   transform-origin: 0 100%;
   transform: rotate(-12deg) scale(1.2,1.2);
   bottom: 0;
@@ -49,30 +50,40 @@ const PayOff = styled.div`
   margin: 10px auto 50px auto;
   font-size: 34px;
   @media (max-width: 600px) {
-    font-size: 24px;
+    font-size: 28px;
+    margin: 0 auto 30px auto;
   }
 `
 
 const NavBar = styled.nav`
-padding-top: 3px;
-  button {
-    border: none;
-    color: #ffffff;
-    border-radius: 12px;
-    padding: 17px 24px 18px 24px;
-    margin-top: -6px;
-    background-color: #3ED4AC;
-    font-weight: 500;
-    transition: .25s;
-
-      a {
-        color: #ffffff;
-      }
-      :hover {
-        background-color: #42DCB3;
-        cursor: pointer;
-      }
-  }
+form {
+  margin-bottom: -10px;
+}
+input[type=text] {
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  padding: 14px 16px 15px 16px;
+  box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.125);
+}
+button {
+  margin: 4px;
+  border: none;
+  color: #f0f0f0;
+  border-radius: 6px;
+  padding: 14px 16px 15px 16px;
+  background-color: #3E3D3D;
+  font-weight: 400;
+  transition: .25s;
+    a {
+      color: #ffffff;
+    }
+    :hover {
+      background-color: #42DCB3;
+      cursor: pointer;
+    }
+}
 `
 
 const Header = ({ siteTitle, backgroundImage }) => (
@@ -89,8 +100,14 @@ const Header = ({ siteTitle, backgroundImage }) => (
           <img src={logo} alt="Fuve logo" />
         </Link>
       </h1>
-      <PayOff>Future versions of <br/>electric vehicles ⌄</PayOff>
-      <NavBar><button>Receive updates</button></NavBar>
+      <PayOff>Future versions of <br/>electric vehicles</PayOff>
+      <NavBar>
+        <form method="post" action="#" style={{display: 'inline-block' }} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="bot-field" />
+          <input type="text" name="email" id="email" placeholder="Enter your email address" style={{minWidth: 214 }} />
+          <button type="submit" value="Send Message" className="special">Get updates</button>
+        </form>
+      </NavBar>
     </HeaderContainer>
   </HeaderWrapper>
 )
