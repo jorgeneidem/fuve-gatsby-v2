@@ -27,9 +27,9 @@ const HeaderContainer = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  /*background: linear-gradient(110deg, #38A688, #2BB993, #26C299, #3CC39F);*/
   background: #BAB7B6;
-  background: linear-gradient(110deg, #B7B4B4, #BAB7B6, #BFBCBB, #C2BFBE);
+  background: linear-gradient(110deg, #38A688, #2BB993, #26C299, #3CC39F);
+  /* background: linear-gradient(110deg, #B7B4B4, #BAB7B6, #BFBCBB, #C2BFBE); */
   transform-origin: 0 100%;
   transform: rotate(-12deg) scale(1.2,1.2);
   bottom: 0;
@@ -60,12 +60,19 @@ form {
   margin-bottom: -10px;
 }
 input[type=text] {
+  background: #f6f6f6;
   margin: 4px;
   border: none;
   border-radius: 6px;
   -webkit-appearance: none;
   padding: 14px 16px 15px 16px;
-  box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.125);
+  :hover {  
+    color: #282828;  
+    background: #ffffff;
+  }
+  :focus {
+    background: #ffffff;
+  }
 }
 button {
   margin: 4px;
@@ -76,12 +83,15 @@ button {
   background-color: #3E3D3D;
   font-weight: 400;
   transition: .25s;
-    a {
-      color: #ffffff;
-    }
-    :hover {
-      background-color: #42DCB3;
+  
+    :hover {  
+      background-color: #4D4B4A;
       cursor: pointer;
+    }
+
+    :active {  
+      background-color: #363434;
+      
     }
 }
 `
