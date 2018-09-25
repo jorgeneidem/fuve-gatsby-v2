@@ -75,7 +75,8 @@ export default class PostPage extends Component {
         <article>
           <h1>Thank you</h1>
             <PostPageBodyContent>
-                <h4>You're signed up to receive e-mail updates when new vehicles are added to Fuve.</h4>
+                <h4>You're about to sign up to receive an e-mail when new vehicles are added to Fuve.</h4>
+                <p>New car models aren't announced every day, so expect to hear from us monthly, at most. You will have to confirm in a separate email before the signup is completed.</p>
             </PostPageBodyContent>
             <HomeLinkWrapper>
               <Link to={`/`}>
