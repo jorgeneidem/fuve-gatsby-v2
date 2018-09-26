@@ -1,6 +1,7 @@
 ---
 title: "Faraday Future FF 91"
 date: "2018-08-12"
+availability: "2019"
 cover_image: "../images/faradayfuture-ff91.jpg"
 gallery_image_1: "../images/faradayfuture-ff91.jpg"
 ---

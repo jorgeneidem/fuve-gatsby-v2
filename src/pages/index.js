@@ -29,13 +29,16 @@ export const query = graphql`
         desc
       }
     }
-      allMarkdownRemark {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___availability], order: DESC }
+      ) {
         edges {
           node {
             id
             frontmatter {
               title
               date(formatString: "MMMM DD YYYY")
+              availability
               cover_image {
                 childImageSharp {
                   sizes(maxWidth: 940) {

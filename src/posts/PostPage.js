@@ -36,8 +36,7 @@ const PostPageBody = styled.div`
     h1 {
       font-size: 2rem;
     }
-  }
-  
+  }  
 `
 
 const HomeLinkWrapper = styled.div`

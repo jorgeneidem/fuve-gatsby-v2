@@ -1,6 +1,7 @@
 ---
 title: "Rimac C_Two"
 date: "2018-08-12"
+availability: "2021"
 cover_image: "../images/rimac-ctwo.jpg"
 gallery_image_1: "../images/rimac-ctwo.jpg"
 ---

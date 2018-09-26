@@ -1,6 +1,7 @@
 ---
 title: "Byton M-Byte"
 date: "2018-08-06"
+availability: "2020"
 cover_image: "../images/byton-mbyte.jpg"
 gallery_image_1: "../images/byton-mbyte.jpg"
 ---

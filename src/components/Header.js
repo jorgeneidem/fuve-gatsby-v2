@@ -70,7 +70,6 @@ form {
       top: -12px;
       left: 4px;
       visibility: hidden;
-      
     }
   }
 
@@ -128,8 +127,7 @@ input[type=email] {
   color:transparent;
 }
 
-
-button[type=submit] {
+form div #submit-email-button {
   margin: 4px;
   border: none;
   color: rgba(255,255,255,0.7);
@@ -141,15 +139,16 @@ button[type=submit] {
   :focus {
     box-shadow: 0 0 1em 0.1875em rgba(18,64,52,.25);
     outline: 0;
-    background: #363434;
+    background: #434241;
     color: rgba(255,255,255,1);
   }
   :hover {  
-    background-color: #4D4B4A;
-    cursor: pointer; 
+    background: #434241;
+    cursor: pointer;
   }
   :active {  
-    background-color: #363434;   
+    background: #363434;  
+    box-shadow: none; 
   }
 }
 `

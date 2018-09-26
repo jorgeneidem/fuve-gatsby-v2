@@ -8,7 +8,7 @@ const PostListing = ({ post }) => (
   <Link to={post.fields.slug} className={`vehicle fuve-mix y2020 electric`}>
     <div className="aspect-ratio-box-inside">
       <h2 className="vehicle__title">{post.frontmatter.title}</h2>
-      <p className="vehicle__year">2020</p>
+      <p className="vehicle__year">{post.frontmatter.availability}</p>
       <Img className="vehicle__artwork" style={{position:"absolute",height:"100%",width:"100%"}} sizes={post.frontmatter.cover_image.childImageSharp.sizes} />
     </div>
   </Link>

@@ -1,6 +1,7 @@
 ---
 title: "SF Motors SF7"
 date: "2018-08-12"
+availability: "2019"
 cover_image: "../images/sfmotors-sf7.jpg"
 gallery_image_1: "../images/sfmotors-sf7.jpg"
 ---
@@ -15,7 +16,7 @@ gallery_image_1: "../images/sfmotors-sf7.jpg"
 
 | Engine     | Base price    | Available  |
 | ------------- | -------------:| ------- |
-| Battery electric | £70000          | 2020     |
+| Battery electric | £70000          | 2019     |
 
 
 ![SF Motors SF7](../images/sfmotors-sf7-image1.jpg)

@@ -1,6 +1,7 @@
 ---
 title: "Porsche Taycan"
 date: "2018-08-06"
+availability: "2020"
 cover_image: "../images/porsche-taycan.jpg"
 gallery_image_1: "../images/porsche-taycan.jpg"
 ---
