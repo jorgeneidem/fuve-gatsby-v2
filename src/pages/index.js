@@ -10,7 +10,6 @@ const IndexPage = ({data}) => (
     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
     gridGap: 30,
     gridRowGap: 33,
-    justifyContent: 'start',
     maxWidth: 1280
   }}>
     {data.allMarkdownRemark.edges.map(({node}) => {

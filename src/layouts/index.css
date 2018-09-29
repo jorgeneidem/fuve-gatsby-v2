@@ -4,7 +4,6 @@ html {
 }
 body {
   margin: 0;
-  /* background: #C2BFBE; */ 
   background: #3CC39F; 
 }
 
@@ -554,6 +553,7 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
